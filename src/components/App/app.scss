@@ -33,10 +33,11 @@ body {
 }
 .AppMain {
     @include u1.block_display();
+    $sidePadding: 3%;
 
     .hdrCvr {
         @include u1.flex_display();
-        padding: 25px 3%;
+        padding: 25px $sidePadding;
         font-size: u1.rem(16);
         font-weight: 700;
         color: #5a2020;
@@ -55,6 +56,16 @@ body {
         .hdrWrkUs {
             padding: 0 0 5px;
             border-bottom: 3px solid currentColor;
+        }
+    }
+
+    .DtsMidCvr {
+        padding: 0 $sidePadding;
+
+        .DtsBig {
+            font-size: u1.rem(180);
+            font-weight: bold;
+            color: #8a83e2;
         }
     }
 }

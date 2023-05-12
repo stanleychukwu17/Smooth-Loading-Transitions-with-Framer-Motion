@@ -17,13 +17,13 @@ const App = () => {
                 </div>
                 <div className="hdrWrkUs">Let's work together</div>
             </header>
-            <div className="">
+            <div className="DtsMidCvr">
                 <div className="">
-                    <div className="">Brand</div>
+                    <div className="DtsBig">Brand</div>
                     <div className="">write up</div>
                 </div>
-                <div className="">Experience</div>
-                <div className="">Studio</div>
+                <div className="DtsBig">Experience</div>
+                <div className="DtsBig">Studio</div>
             </div>
         </div>
     )
