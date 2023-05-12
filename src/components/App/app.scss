@@ -1,0 +1,60 @@
+@forward '../../styles/globals/';
+@use '../../styles/util/' as u1;
+
+
+
+.test1 {
+    @include u1.media(">=desktop") {
+        background-color: yellow;
+
+        &::after {
+            content: "desktop"
+        }
+    }
+    @include u1.media(">=tablet", "<desktop") {
+        background-color: skyblue;
+
+        &::after {
+            content: "tablet"
+        }
+    }
+
+    @include u1.media(">=phone", "<tablet") {
+        background-color: aquamarine;
+
+        &::after {
+            content: "phone"
+        }
+    }
+}
+
+body {
+    background-color: #fffefc !important;
+}
+.AppMain {
+    @include u1.block_display();
+
+    .hdrCvr {
+        @include u1.flex_display();
+        padding: 25px 3%;
+        font-size: u1.rem(16);
+        font-weight: 700;
+        color: #5a2020;
+
+        .hdrLogo {
+            font-size: u1.rem(27);
+            font-weight: 800;
+        }
+        .hdrItems {
+            @include u1.flex_display();
+
+            > div {
+                padding: 0 25px;
+            }
+        }
+        .hdrWrkUs {
+            padding: 0 0 5px;
+            border-bottom: 3px solid currentColor;
+        }
+    }
+}
