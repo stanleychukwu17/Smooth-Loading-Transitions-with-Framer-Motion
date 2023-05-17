@@ -28,8 +28,9 @@
     }
 }
 
+$bgColor: #fffefc;
 body {
-    background-color: #fffefc !important;
+    background-color: $bgColor !important;
 }
 .AppMain {
     @include u1.block_display();
@@ -62,6 +63,16 @@ body {
     .DtsMidCvr {
         padding: 0 $sidePadding;
 
+        .DtsTopHt {
+            @include u1.flex_display();
+
+            .DtsWriteUp {
+                font-weight: 800;
+                font-size: u1.rem(14.5);
+                line-height: 1.4;
+                transform: translateX(-100%) translateY(20px);
+            }
+        }
         .DtsBig, .DtsExpCvr {
             font-size: u1.rem(180);
             font-weight: 700;

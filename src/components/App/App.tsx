@@ -24,10 +24,12 @@ const App = () => {
                 <div className="hdrWrkUs">Let's work together</div>
             </header>
             <div className="DtsMidCvr">
-                <div className="">
+                <div className="DtsTopHt">
                     <div className="DtsBig">brand</div>
-                    <div className="">
-                        We are specialized
+                    <div className="DtsWriteUp">
+                        <p>We are specialized in setting up the</p>
+                        <p>foundation of your brand and</p>
+                        <p>setting you up for success</p>
                     </div>
                 </div>
                 <div className="DtsExpCvr">
