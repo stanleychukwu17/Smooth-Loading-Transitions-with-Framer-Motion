@@ -62,10 +62,19 @@ body {
     .DtsMidCvr {
         padding: 0 $sidePadding;
 
-        .DtsBig {
-            font-size: u1.rem(180);
+        .DtsBig, .DtsExpCvr {
+            font-size: u1.rem(150);
             font-weight: bold;
             color: #8a83e2;
+        }
+        .DtsExpCvr {
+            @include u1.flex_display();
+
+            .DtsExp {
+                @include u1.block_display();
+                min-width: 100vw;
+                text-indent: 10%;
+            }
         }
     }
 }
