@@ -8,6 +8,13 @@ import './app.scss';
     * https://huemint.com/brand-intersection/#palette=0a050a-d7cecf-ab7655-5a2020
     * https://huemint.com/brand-intersection/#palette=f295bb-093e6e-758b90-f8fbfb
 */
+
+import p1 from '../../assets/images/p1.jpg'
+import p2 from '../../assets/images/p2.jpg'
+import p3 from '../../assets/images/p3.jpg'
+import p4 from '../../assets/images/p4.jpg'
+import p5 from '../../assets/images/p5.jpg'
+
 const App = () => {
 
     return (
@@ -41,6 +48,13 @@ const App = () => {
             <div className="scrollDown">
                 <div className="">Scroll</div>
                 <div className="">Down</div>
+            </div>
+            <div className="ImgHdCvr">
+                <div className="imgEch img1"><img src={p1} alt="" /></div>
+                <div className="imgEch img2"><img src={p2} alt="" /></div>
+                <div className="imgEch img3"><img src={p4} alt="" /></div>
+                <div className="imgEch img4"><img src={p3} alt="" /></div>
+                <div className="imgEch img5"><img src={p5} alt="" /></div>
             </div>
         </div>
     )
