@@ -26,13 +26,19 @@ const App = () => {
             <div className="DtsMidCvr">
                 <div className="">
                     <div className="DtsBig">brand</div>
-                    <div className="">write up</div>
+                    <div className="">
+                        We are specialized
+                    </div>
                 </div>
                 <div className="DtsExpCvr">
                     <ExpComp />
                     <ExpComp />
                 </div>
                 <div className="DtsBig DtsStudio">studio</div>
+            </div>
+            <div className="scrollDown">
+                <div className="">Scroll</div>
+                <div className="">Down</div>
             </div>
         </div>
     )
