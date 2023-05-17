@@ -25,14 +25,14 @@ const App = () => {
             </header>
             <div className="DtsMidCvr">
                 <div className="">
-                    <div className="DtsBig">Brand</div>
+                    <div className="DtsBig">brand</div>
                     <div className="">write up</div>
                 </div>
                 <div className="DtsExpCvr">
                     <ExpComp />
                     <ExpComp />
                 </div>
-                <div className="DtsBig">Studio</div>
+                <div className="DtsBig DtsStudio">studio</div>
             </div>
         </div>
     )

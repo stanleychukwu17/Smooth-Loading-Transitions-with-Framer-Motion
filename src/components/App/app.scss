@@ -63,8 +63,8 @@ body {
         padding: 0 $sidePadding;
 
         .DtsBig, .DtsExpCvr {
-            font-size: u1.rem(150);
-            font-weight: bold;
+            font-size: u1.rem(180);
+            font-weight: 700;
             color: #8a83e2;
         }
         .DtsExpCvr {
@@ -73,8 +73,11 @@ body {
             .DtsExp {
                 @include u1.block_display();
                 min-width: 100vw;
-                text-indent: 10%;
+                text-indent: 20%;
             }
+        }
+        .DtsStudio {
+            text-indent: 40%;
         }
     }
 }
