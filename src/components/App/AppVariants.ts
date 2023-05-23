@@ -5,6 +5,22 @@ type general = {
     animate?: Variant;
 }
 
+
+
+export const headerVariant: general = {
+    initial: {
+        y: '-100px',
+        opacity: 0
+    },
+    animate: {
+        y: '0',
+        opacity: 1,
+        transition: {
+            duration: .4,
+            delay: 4.4
+        }
+    }
+}
 export const fImgCvr: general = {
     initial: {
         y: '-95vh'

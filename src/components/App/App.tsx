@@ -5,7 +5,7 @@ import { gsap } from 'gsap';
 import ExpComp from '../Exp/ExpComp';
 import './app.scss';
 
-import { fChildren, fImgCvr } from './AppVariants';
+import { fChildren, fImgCvr, headerVariant } from './AppVariants';
 
 /**
     * https://huemint.com/brand-intersection/#palette=fffefc-2d448d-8a83e2-b69551
@@ -32,7 +32,7 @@ const App = () => {
 
     return (
         <div className="AppMain">
-            <header className='hdrCvr'>
+            <motion.header variants={headerVariant} initial='initial' animate='animate' className='hdrCvr'>
                 <div className="hdrLogo">STANLEY</div>
                 <div className="hdrItems">
                     <div className="">Design</div>
@@ -42,7 +42,7 @@ const App = () => {
                     <div className="">why work with us?</div>
                 </div>
                 <div className="hdrWrkUs">Let's work together</div>
-            </header>
+            </motion.header>
             <div className="DtsMidCvr">
                 <div className="DtsTopHt">
                     <div className="DtsBig">brand</div>
