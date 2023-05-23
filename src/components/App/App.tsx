@@ -1,7 +1,10 @@
 import ExpComp from '../Exp/ExpComp';
 import './app.scss';
-// import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 // import { gsap } from 'gsap';
+
+import { fImageVariant } from './AppVariants';
+
 /**
     * https://huemint.com/brand-intersection/#palette=fffefc-2d448d-8a83e2-b69551
     * https://huemint.com/brand-intersection/#palette=721b4e-e5e5d7-6a97a6-323541
@@ -49,6 +52,13 @@ const App = () => {
                 <div className="">Scroll</div>
                 <div className="">Down</div>
             </div>
+            <motion.div className="ImgHdCvr FirstImage" variants={fImageVariant}>
+                <div className="imgEch img1"><img src={p1} alt="" /></div>
+                <div className="imgEch img2"><img src={p2} alt="" /></div>
+                <div className="imgEch img3"><img src={p4} alt="" /></div>
+                <div className="imgEch img4"><img src={p3} alt="" /></div>
+                <div className="imgEch img5"><img src={p5} alt="" /></div>
+            </motion.div>
             <div className="ImgHdCvr">
                 <div className="imgEch img1"><img src={p1} alt="" /></div>
                 <div className="imgEch img2"><img src={p2} alt="" /></div>

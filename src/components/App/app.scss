@@ -75,7 +75,7 @@ body {
         }
         .DtsBig, .DtsExpCvr {
             font-size: u1.rem(180);
-            font-weight: 700;
+            font-weight: 800;
             color: #8a83e2;
         }
         .DtsExpCvr {
@@ -88,7 +88,7 @@ body {
             }
         }
         .DtsStudio {
-            text-indent: 40%;
+            text-indent: 35%;
         }
     }
 
@@ -144,5 +144,8 @@ body {
                 }
             }
         }
+    }
+    .FirstImage {
+        margin: 0 0 50px;
     }
 }
