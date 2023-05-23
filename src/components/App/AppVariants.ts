@@ -8,6 +8,13 @@ type general = {
 export const fImgCvr: general = {
     initial: {
         y: '-95vh'
+    },
+    animate: {
+        y:'-10vh',
+        transition: {
+            delay: 4,
+            duration: .8,
+        }
     }
 }
 

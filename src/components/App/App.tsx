@@ -1,7 +1,9 @@
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { gsap } from 'gsap';
+
 import ExpComp from '../Exp/ExpComp';
 import './app.scss';
-import { motion } from 'framer-motion';
-// import { gsap } from 'gsap';
 
 import { fChildren, fImgCvr } from './AppVariants';
 
@@ -19,6 +21,14 @@ import p4 from '../../assets/images/p4.jpg'
 import p5 from '../../assets/images/p5.jpg'
 
 const App = () => {
+
+    // animations
+    useEffect(() => {
+        gsap.to('.img2, .img3, .img4, .img5', {y:30, opacity:0, delay:3.2, stagger: .3, duration: .5})
+        gsap.to('.img1', {scale:2.27, x:15, delay:4, duration: .8})
+        return () => {}
+    }, [])
+    
 
     return (
         <div className="AppMain">
