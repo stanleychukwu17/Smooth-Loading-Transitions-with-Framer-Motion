@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 
 import ExpComp from '../Exp/ExpComp';
+import EchText from '../EchText/EchText';
+
 import './app.scss';
 
 import { fChildren, fImgCvr, headerVariant } from './AppVariants';
@@ -45,7 +47,9 @@ const App = () => {
             </motion.header>
             <div className="DtsMidCvr">
                 <div className="DtsTopHt">
-                    <div className="DtsBig">brand</div>
+                    <div className="DtsBig">
+                        <EchText text='brand' />
+                    </div>
                     <div className="DtsWriteUp">
                         <p>We are specialized in setting up the</p>
                         <p>foundation of your brand and</p>

@@ -21,19 +21,28 @@ export const headerVariant: general = {
         }
     }
 }
+
+export const echTxtVar_1: general = {
+    initial: {
+        y: 50,
+    },
+    animate: {},
+}
+
 export const fImgCvr: general = {
     initial: {
-        y: '-95vh'
+        y: '-95vh',
+        zIndex: 2,
     },
     animate: {
         y:'-10vh',
+        zIndex: -1,
         transition: {
             delay: 4,
             duration: .8,
         }
     }
 }
-
 export const fChildren: general = {
     initial: (custom) => ({
         opacity: 0,
