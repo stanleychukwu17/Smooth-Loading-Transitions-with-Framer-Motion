@@ -7,7 +7,7 @@ import EchText from '../EchText/EchText';
 
 import './app.scss';
 
-import { fChildren, fImgCvr, headerVariant } from './AppVariants';
+import { exp, exp_2, fChildren, fImgCvr, headerVariant } from './AppVariants';
 
 /**
     * https://huemint.com/brand-intersection/#palette=fffefc-2d448d-8a83e2-b69551
@@ -48,7 +48,7 @@ const App = () => {
             <div className="DtsMidCvr">
                 <div className="DtsTopHt">
                     <div className="DtsBig">
-                        <EchText text='brand' />
+                        <EchText text='branding' />
                     </div>
                     <motion.div variants={headerVariant} initial='initial' animate='animate' className="DtsWriteUp">
                         <p>We are specialized in setting up the</p>
@@ -57,8 +57,12 @@ const App = () => {
                     </motion.div>
                 </div>
                 <div className="DtsExpCvr">
-                    <ExpComp />
-                    <ExpComp />
+                    <motion.div variants={exp} animate='animate'>
+                        <ExpComp />
+                    </motion.div>
+                    <motion.div variants={exp_2} animate='animate' >
+                        <ExpComp />
+                    </motion.div>
                 </div>
                 <div className="DtsBig DtsStudio">
                     <EchText text='studio' />

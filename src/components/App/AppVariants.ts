@@ -35,6 +35,38 @@ export const echTxtVar_1: general = {
         }
     }),
 }
+export const exp : general = {
+    animate: (custom) => ({
+        x: [ '0vw', '-100vw', '100vw', '0vw'],
+        transition: {
+            x: {
+                times: [0, 0.5, 0.5, 1],
+                ease: ['linear', 'linear', 'linear', 'linear'],
+                duration: 8,
+                repeat: Infinity,
+                repeatType: 'loop',
+            },
+            delay: 6
+        }
+    })
+}
+export const exp_2 : general = {
+    initial: {},
+    animate: (custom) => ({
+        color: '#000',
+        x: ['-20vw', '-200vw', '-20vw'],
+        transition: {
+            x: {
+                times: [0, 1, 1],
+                ease: ['linear', 'linear', 'linear'],
+                duration: 8,
+                repeat: Infinity,
+                repeatType: 'loop'
+            },
+            delay: 6.5
+        }
+    })
+}
 
 export const fImgCvr: general = {
     initial: {
