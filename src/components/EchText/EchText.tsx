@@ -1,13 +1,24 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useEffect } from 'react'
+import { motion, useAnimationControls } from 'framer-motion'
+import { echTxtVar_1 } from '../App/AppVariants'
 
 type echProps = {
     text: string
 }
 
-const OneByOne = ({txt}: {txt: string}) => {
+const OneByOne = ({txt, num}: {txt: string, num: number}) => {
+    const controls = useAnimationControls()
+
+    useEffect(() => {
+        setTimeout(() => {
+            controls.start('animate')
+        }, 3900)
+    }, [])
+
     return (
-        <motion.span className="">{txt}</motion.span>
+        <motion.div variants={echTxtVar_1} custom={num} initial='initial' animate={controls}>
+            {txt}
+        </motion.div>
     )
 }
 
@@ -16,10 +27,10 @@ export default function EchText(props: echProps) {
 
     // console.log(props.text, txtToShow)
     return (
-        <div>
-            {txtToShow.map( i => {
-                return <OneByOne txt={i} />
+        <motion.div className='innerCover'>
+            {txtToShow.map( (i, num) => {
+                return <OneByOne txt={i} num={num} key={num} />
             })}
-        </div>
+        </motion.div>
     )
 }

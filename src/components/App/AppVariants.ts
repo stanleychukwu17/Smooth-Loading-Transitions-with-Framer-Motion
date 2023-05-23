@@ -22,11 +22,18 @@ export const headerVariant: general = {
     }
 }
 
+
 export const echTxtVar_1: general = {
     initial: {
-        y: 50,
+        y: '180px',
     },
-    animate: {},
+    animate: (custom) => ({
+        y: 0,
+        transition: {
+            duration: .4,
+            delay: 0.15 * custom,
+        }
+    }),
 }
 
 export const fImgCvr: general = {

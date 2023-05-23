@@ -60,7 +60,9 @@ const App = () => {
                     <ExpComp />
                     <ExpComp />
                 </div>
-                <div className="DtsBig DtsStudio">studio</div>
+                <div className="DtsBig DtsStudio">
+                    <EchText text='studio' />
+                </div>
             </div>
             <div className="scrollDown">
                 <div className="">Scroll</div>
