@@ -116,6 +116,7 @@ body {
 
     .ImgHdCvr {
         @include u1.block_display();
+        display: none;
         width: 100vw;
         height: 100vh;
 
@@ -146,6 +147,8 @@ body {
         }
     }
     .FirstImage {
+        display: block;
         margin: 0 0 50px;
+        background-color: $bgColor;
     }
 }

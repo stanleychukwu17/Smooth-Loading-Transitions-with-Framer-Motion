@@ -5,8 +5,24 @@ type general = {
     animate?: Variant;
 }
 
-export const fImageVariant: general = {
+export const fImgCvr: general = {
     initial: {
-        x: '-1vh'
+        y: '-95vh'
     }
+}
+
+export const fChildren: general = {
+    initial: (custom) => ({
+        opacity: 0,
+        y: 50,
+    }),
+    animate: (custom) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.2 * custom,
+            duration: 1,
+            ease: 'easeOut'
+        }
+    }),
 }
