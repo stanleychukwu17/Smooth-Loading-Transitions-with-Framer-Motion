@@ -26,8 +26,8 @@ const App = () => {
 
     // animations
     useEffect(() => {
-        gsap.to('.img2, .img3, .img4, .img5', {y:30, opacity:0, delay:3.2, stagger: .3, duration: .5})
-        gsap.to('.img1', {scale:2.27, x:15, delay:4, duration: .8})
+        gsap.to('.gsap2, .gsap3, .gsap4, .gsap5', {y:30, opacity:0, delay:3.2, stagger: .3, duration: .5})
+        gsap.to('.gsap1', {scale:2.27, x:15, delay:4, duration: .8})
         return () => {}
     }, [])
     
@@ -50,7 +50,7 @@ const App = () => {
                     <div className="DtsBig">
                         <EchText text='branding' />
                     </div>
-                    <motion.div variants={headerVariant} custom={2} initial='initial' animate='animate' className="DtsWriteUp">
+                    <motion.div variants={headerVariant} custom={1.15} initial='initial' animate='animate' className="DtsWriteUp">
                         <p>We are specialized in setting up the</p>
                         <p>foundation of your brand and</p>
                         <p>setting you up for success</p>
@@ -73,11 +73,11 @@ const App = () => {
                 <motion.div variants={scrollDown_2} initial='initial' animate='animate'>Down</motion.div>
             </motion.div>
             <motion.div className="ImgHdCvr FirstImage" variants={fImgCvr} initial='initial' animate='animate'>
-                <motion.div variants={fChildren} initial='initial' animate='animate' custom={1} className="imgEch img1"><img id='p1' src={p1} alt="" /></motion.div>
-                <motion.div variants={fChildren} initial='initial' animate='animate' custom={2} className="imgEch img2"><img id='p2' src={p2} alt="" /></motion.div>
-                <motion.div variants={fChildren} initial='initial' animate='animate' custom={4} className="imgEch img3"><img id='p4' src={p4} alt="" /></motion.div>
-                <motion.div variants={fChildren} initial='initial' animate='animate' custom={3} className="imgEch img4"><img id='p3' src={p3} alt="" /></motion.div>
-                <motion.div variants={fChildren} initial='initial' animate='animate' custom={5} className="imgEch img5"><img id='p5' src={p5} alt="" /></motion.div>
+                <motion.div variants={fChildren} initial='initial' animate='animate' custom={1} className="imgEch img1 gsap1"><img id='p1' src={p1} alt="" /></motion.div>
+                <motion.div variants={fChildren} initial='initial' animate='animate' custom={2} className="imgEch img2 gsap2"><img id='p2' src={p2} alt="" /></motion.div>
+                <motion.div variants={fChildren} initial='initial' animate='animate' custom={4} className="imgEch img3 gsap3"><img id='p4' src={p4} alt="" /></motion.div>
+                <motion.div variants={fChildren} initial='initial' animate='animate' custom={3} className="imgEch img4 gsap4"><img id='p3' src={p3} alt="" /></motion.div>
+                <motion.div variants={fChildren} initial='initial' animate='animate' custom={5} className="imgEch img5 gsap5"><img id='p5' src={p5} alt="" /></motion.div>
             </motion.div>
             <div className="ImgHdCvr">
                 <div className="imgEch img1"><img src={p1} alt="" /></div>

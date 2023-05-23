@@ -70,7 +70,7 @@ body {
                 font-weight: 800;
                 font-size: u1.rem(14.5);
                 line-height: 1.4;
-                transform: translateX(-100%) translateY(20px);
+                transform: translateX(-80%) translateY(20px) !important;
             }
         }
         .DtsBig, .DtsExpCvr {
@@ -125,7 +125,6 @@ body {
 
     .ImgHdCvr {
         @include u1.block_display();
-        display: none;
         width: 100vw;
         height: 100vh;
 
@@ -156,7 +155,6 @@ body {
         }
     }
     .FirstImage {
-        display: block;
         margin: 0 0 50px;
         background-color: $bgColor;
     }
