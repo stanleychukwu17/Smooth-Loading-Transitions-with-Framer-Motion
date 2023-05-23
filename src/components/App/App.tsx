@@ -7,7 +7,7 @@ import EchText from '../EchText/EchText';
 
 import './app.scss';
 
-import { exp, exp_2, fChildren, fImgCvr, headerVariant } from './AppVariants';
+import { exp, exp_2, fChildren, fImgCvr, headerVariant, scrollDown_1, scrollDown_2 } from './AppVariants';
 
 /**
     * https://huemint.com/brand-intersection/#palette=fffefc-2d448d-8a83e2-b69551
@@ -34,7 +34,7 @@ const App = () => {
 
     return (
         <div className="AppMain">
-            <motion.header variants={headerVariant} initial='initial' animate='animate' className='hdrCvr'>
+            <motion.header variants={headerVariant} custom={1} initial='initial' animate='animate' className='hdrCvr'>
                 <div className="hdrLogo">STANLEY</div>
                 <div className="hdrItems">
                     <div className="">Design</div>
@@ -50,7 +50,7 @@ const App = () => {
                     <div className="DtsBig">
                         <EchText text='branding' />
                     </div>
-                    <motion.div variants={headerVariant} initial='initial' animate='animate' className="DtsWriteUp">
+                    <motion.div variants={headerVariant} custom={2} initial='initial' animate='animate' className="DtsWriteUp">
                         <p>We are specialized in setting up the</p>
                         <p>foundation of your brand and</p>
                         <p>setting you up for success</p>
@@ -68,10 +68,10 @@ const App = () => {
                     <EchText text='studio' />
                 </div>
             </div>
-            <div className="scrollDown">
-                <div className="">Scroll</div>
-                <div className="">Down</div>
-            </div>
+            <motion.div className="scrollDown" variants={scrollDown_1} initial='initial' animate='animate'>
+                <motion.div variants={scrollDown_2} initial='initial' animate='animate'>Scroll</motion.div>
+                <motion.div variants={scrollDown_2} initial='initial' animate='animate'>Down</motion.div>
+            </motion.div>
             <motion.div className="ImgHdCvr FirstImage" variants={fImgCvr} initial='initial' animate='animate'>
                 <motion.div variants={fChildren} initial='initial' animate='animate' custom={1} className="imgEch img1"><img id='p1' src={p1} alt="" /></motion.div>
                 <motion.div variants={fChildren} initial='initial' animate='animate' custom={2} className="imgEch img2"><img id='p2' src={p2} alt="" /></motion.div>

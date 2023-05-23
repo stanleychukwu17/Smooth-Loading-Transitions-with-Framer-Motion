@@ -12,14 +12,14 @@ export const headerVariant: general = {
         y: '-100px',
         opacity: 0
     },
-    animate: {
+    animate: (custom) => ({
         y: '0',
         opacity: 1,
         transition: {
             duration: .4,
-            delay: 4.7
+            delay: 4.7 * custom
         }
-    }
+    })
 }
 
 
@@ -67,6 +67,36 @@ export const exp_2 : general = {
         }
     })
 }
+
+export const scrollDown_1: general = {
+    initial: {
+        scale: 0
+    },
+    animate: {
+        scale: 1,
+        transition: {
+            duration: .7,
+            type: 'spring',
+            stiffness: 700,
+            bounce: 50,
+            delay: 4.7
+        }
+    }
+}
+export const scrollDown_2: general = {
+    initial: {
+        opacity: 0
+    },
+    animate: {
+        opacity: 1,
+        transition: {
+            duration: .5,
+            ease: 'easeInOut',
+            delay: 5.5
+        }
+    }
+}
+
 
 export const fImgCvr: general = {
     initial: {
