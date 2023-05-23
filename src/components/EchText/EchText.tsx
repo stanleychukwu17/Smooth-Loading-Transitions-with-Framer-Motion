@@ -12,8 +12,8 @@ const OneByOne = ({txt, num}: {txt: string, num: number}) => {
     useEffect(() => {
         setTimeout(() => {
             controls.start('animate')
-        }, 3900)
-    }, [])
+        }, 4300)
+    }, [controls])
 
     return (
         <motion.div variants={echTxtVar_1} custom={num} initial='initial' animate={controls}>
@@ -25,7 +25,6 @@ const OneByOne = ({txt, num}: {txt: string, num: number}) => {
 export default function EchText(props: echProps) {
     const txtToShow = props.text.split('')
 
-    // console.log(props.text, txtToShow)
     return (
         <motion.div className='innerCover'>
             {txtToShow.map( (i, num) => {

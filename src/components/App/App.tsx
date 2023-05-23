@@ -50,11 +50,11 @@ const App = () => {
                     <div className="DtsBig">
                         <EchText text='brand' />
                     </div>
-                    <div className="DtsWriteUp">
+                    <motion.div variants={headerVariant} initial='initial' animate='animate' className="DtsWriteUp">
                         <p>We are specialized in setting up the</p>
                         <p>foundation of your brand and</p>
                         <p>setting you up for success</p>
-                    </div>
+                    </motion.div>
                 </div>
                 <div className="DtsExpCvr">
                     <ExpComp />

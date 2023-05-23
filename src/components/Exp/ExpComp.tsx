@@ -1,7 +1,10 @@
 import React from 'react'
+import EchText from '../EchText/EchText'
 
 export default function ExpComp() {
     return (
-        <div className='DtsExp'>experience</div>
+        <div className='DtsExp'>
+            <EchText text='experience' />
+        </div>
     )
 }

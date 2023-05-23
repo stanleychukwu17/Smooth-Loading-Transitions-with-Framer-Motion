@@ -17,7 +17,7 @@ export const headerVariant: general = {
         opacity: 1,
         transition: {
             duration: .4,
-            delay: 4.4
+            delay: 4.7
         }
     }
 }
