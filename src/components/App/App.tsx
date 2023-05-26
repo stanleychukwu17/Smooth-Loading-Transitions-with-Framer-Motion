@@ -1,6 +1,7 @@
 import { useEffect, } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useScroll } from 'framer-motion';
 import { gsap } from 'gsap';
+import {usePin} from '../../hooks/usePin'
 
 import ExpComp from '../Exp/ExpComp';
 import EchText from '../EchText/EchText';
@@ -23,14 +24,19 @@ import p4 from '../../assets/images/p4.jpg'
 import p5 from '../../assets/images/p5.jpg'
 
 const App = () => {
+    const mid_Y = useMotionValue(0)
+    usePin({
+        'itemToUpdate':mid_Y,
+        'distanceFromTop':83, // to get the distance of the element from the top, const item = document.querySelector('div.DtsMidCvr'); const offset = item?.getBoundingClientRect(); console.log(offset.y or offset.top)
+        'distanceToPin': 2000,
+    })
+
 
     // the bellow useEffect is used for gsap animations
     useEffect(() => {
         gsap.to('.gsap2, .gsap3, .gsap4, .gsap5', {y:30, opacity:0, delay:3.2, stagger: .3, duration: .5})
         gsap.to('.gsap1', {scale:2.27, x:15, delay:4, duration: .8})
-        return () => {}
     }, [])
-
 
 
     return (
@@ -46,7 +52,7 @@ const App = () => {
                 </div>
                 <div className="hdrWrkUs">Let's work together</div>
             </motion.header>
-            <div className="DtsMidCvr">
+            <motion.div className="DtsMidCvr" style={{y:mid_Y}}>
                 <div className="DtsTopHt">
                     <div className="DtsBig">
                         <EchText text='branding' />
@@ -68,12 +74,13 @@ const App = () => {
                 <div className="DtsBig DtsStudio">
                     <EchText text='studio' />
                 </div>
-            </div>
+            </motion.div>
             <motion.div className="scrollDown" variants={scrollDown_1} initial='initial' animate='animate'>
                 <motion.div variants={scrollDown_2} initial='initial' animate='animate'>Scroll</motion.div>
                 <motion.div variants={scrollDown_2} initial='initial' animate='animate'>Down</motion.div>
             </motion.div>
-            {/* below is the initial loader of the page, these are the first images that appears when the page loads */}
+
+            {/*--start-- below is the initial loader of the page, these are the first images that appears when the page loads */}
             <motion.div className="ImgHdCvr FirstImage" variants={fImgCvr} initial='initial' animate='animate'>
                 <motion.div variants={fChildren} initial='initial' animate='animate' custom={1} className="imgEch img1 gsap1"><img id='p1' src={p1} alt="" /></motion.div>
                 <motion.div variants={fChildren} initial='initial' animate='animate' custom={2} className="imgEch img2 gsap2"><img id='p2' src={p2} alt="" /></motion.div>
@@ -81,6 +88,8 @@ const App = () => {
                 <motion.div variants={fChildren} initial='initial' animate='animate' custom={3} className="imgEch img4 gsap4"><img id='p3' src={p3} alt="" /></motion.div>
                 <motion.div variants={fChildren} initial='initial' animate='animate' custom={5} className="imgEch img5 gsap5"><img id='p5' src={p5} alt="" /></motion.div>
             </motion.div>
+            {/*--end--*/}
+
             <div className="ImgHdCvr">
                 <div className="imgEch img1"><img src={p1} alt="" /></div>
                 <div className="imgEch img2"><img src={p2} alt="" /></div>
