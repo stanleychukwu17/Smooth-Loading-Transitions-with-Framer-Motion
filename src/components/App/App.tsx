@@ -34,8 +34,15 @@ const App = () => {
 
     // the bellow useEffect is used for gsap animations
     useEffect(() => {
+        // on page load, we stop the 'body' from overflowing. we also scroll the 'body' to the top so the animation is visible
+        const body = document.querySelector('body') as Element
+        body.classList.add('bodyStopOverflow')
+
         gsap.to('.gsap2, .gsap3, .gsap4, .gsap5', {y:30, opacity:0, delay:3.2, stagger: .3, duration: .5})
-        gsap.to('.gsap1', {scale:2.27, x:15, delay:4, duration: .8})
+        gsap.to('.gsap1', {
+            scale:2.27, x:15, delay:4, duration: .8,
+            onComplete: () => { body.classList.remove('bodyStopOverflow') }
+        })
     }, [])
 
 

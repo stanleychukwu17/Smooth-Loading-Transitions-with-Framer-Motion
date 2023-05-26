@@ -3,38 +3,13 @@
 
 
 
-.test1 {
-    @include u1.media(">=desktop") {
-        background-color: yellow;
-
-        &::after {
-            content: "desktop"
-        }
-    }
-    @include u1.media(">=tablet", "<desktop") {
-        background-color: skyblue;
-
-        &::after {
-            content: "tablet"
-        }
-    }
-
-    @include u1.media(">=phone", "<tablet") {
-        background-color: aquamarine;
-
-        &::after {
-            content: "phone"
-        }
-    }
-}
-
-:root {
-    --window_width: 1200px;
-    --window_height: 600px;
-}
 $bgColor: #fffefc;
 body {
     background-color: $bgColor !important;
+}
+.bodyStopOverflow {
+    height: 100vh;
+    @include u1.block_display();
 }
 .AppMain {
     @include u1.block_display();
