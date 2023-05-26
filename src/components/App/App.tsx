@@ -41,8 +41,8 @@ const App = () => {
     const txtOpacity = useTransform(scrollY, [0 , 300], [1, 0])
 
     // for scrolling down roll away from the scene
-    const rollRotate = useTransform(scrollY, [0 , 1000], [0, -360])
-    const rollX = useTransform(scrollY, [0 , 1000], [0, -200])
+    const rollRotate = useSpring(useTransform(scrollY, [0 , 1000], [0, -360]))
+    const rollX = useSpring(useTransform(scrollY, [0 , 1000], [0, -200]))
 
     // for the large image
     // const bigImgY = useTransform(scrollY, [0 , 2500], [0, 1000])
@@ -83,9 +83,9 @@ const App = () => {
             <motion.div className="DtsMidCvr" style={{y:mid_Y}}>
                 <div className="DtsTopHt">
                     <div className="DtsBig">
-                        <EchText text='branding' />
+                        <EchText text='branding' allowBackground />
                     </div>
-                    <motion.div variants={headerVariant} custom={1.15} initial='initial' animate='animate' className="DtsWriteUp" style={{opacity: txtOpacity, y: txtY}}>
+                    <motion.div className="DtsWriteUp" variants={headerVariant} custom={1.15} initial='initial' animate='animate' style={{opacity: txtOpacity, y: txtY}}>
                         <p>We are specialized in setting up the</p>
                         <p>foundation of your brand and</p>
                         <p>setting you up for success</p>
@@ -100,7 +100,7 @@ const App = () => {
                     </motion.div>
                 </div>
                 <motion.div className="DtsBig DtsStudio" style={{paddingLeft: padLeft}}>
-                    <EchText text='studio' />
+                    <EchText text='studio' allowBackground />
                 </motion.div>
             </motion.div>
             <motion.div className="scrollDown" variants={scrollDown_1} initial='initial' animate='animate' style={{x:rollX, rotate:rollRotate}}>

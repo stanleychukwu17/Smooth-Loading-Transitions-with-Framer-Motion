@@ -52,20 +52,40 @@ body {
                 position: relative;
                 top: 20px;
                 left: -10%;
-                // transform: translateX(-80%) translateY(20px);
             }
         }
         .DtsBig, .DtsExpCvr {
+            @include u1.flex_display();
+            $boxHeight: 226px;
             color: #8a30e2;
 
-            .innerCover {
-                display: flex;
-                height: 226px;
-                overflow: hidden;
-            }
-            .DtsText {
-                font-size: 180px;
-                font-weight: 800;
+            .dtsInner1 {
+                @include u1.block_display();
+                padding: 0 30px;
+
+                .innerA {
+                    display: flex;
+                    overflow: hidden;
+                    height: $boxHeight;
+                    z-index: 1;
+    
+                    .DtsText {
+                        font-size: 180px;
+                        font-weight: 800;
+                    }
+                }
+                .innerB {
+                    @include u1.block_display();
+                    background-color: #000;
+                    height: $boxHeight;
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    transition: all 1s ease-out
+                }
             }
         }
         .DtsExpCvr {
@@ -81,7 +101,8 @@ body {
             }
         }
         .DtsStudio {
-            padding: 0 0 0 55%
+            padding: 0 0 0 55%;
+            transition: all 1s ease-out
         }
     }
 
@@ -89,7 +110,7 @@ body {
         @include u1.block_display();
         position: fixed;
         top: auto;
-        left: 2%;
+        left: 5%;
         bottom: 12%;
         right: auto;
         width: 110px;

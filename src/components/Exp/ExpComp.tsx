@@ -4,7 +4,7 @@ import EchText from '../EchText/EchText'
 export default function ExpComp() {
     return (
         <div className='DtsExp'>
-            <EchText text='experience' />
+            <EchText text='experience' allowBackground={false} />
         </div>
     )
 }
