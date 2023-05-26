@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 
@@ -24,13 +24,14 @@ import p5 from '../../assets/images/p5.jpg'
 
 const App = () => {
 
-    // animations
+    // the bellow useEffect is used for gsap animations
     useEffect(() => {
         gsap.to('.gsap2, .gsap3, .gsap4, .gsap5', {y:30, opacity:0, delay:3.2, stagger: .3, duration: .5})
         gsap.to('.gsap1', {scale:2.27, x:15, delay:4, duration: .8})
         return () => {}
     }, [])
-    
+
+
 
     return (
         <div className="AppMain">
@@ -72,6 +73,7 @@ const App = () => {
                 <motion.div variants={scrollDown_2} initial='initial' animate='animate'>Scroll</motion.div>
                 <motion.div variants={scrollDown_2} initial='initial' animate='animate'>Down</motion.div>
             </motion.div>
+            {/* below is the initial loader of the page, these are the first images that appears when the page loads */}
             <motion.div className="ImgHdCvr FirstImage" variants={fImgCvr} initial='initial' animate='animate'>
                 <motion.div variants={fChildren} initial='initial' animate='animate' custom={1} className="imgEch img1 gsap1"><img id='p1' src={p1} alt="" /></motion.div>
                 <motion.div variants={fChildren} initial='initial' animate='animate' custom={2} className="imgEch img2 gsap2"><img id='p2' src={p2} alt="" /></motion.div>

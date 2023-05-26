@@ -28,6 +28,10 @@
     }
 }
 
+:root {
+    --window_width: 1200px;
+    --window_height: 600px;
+}
 $bgColor: #fffefc;
 body {
     background-color: $bgColor !important;
@@ -125,8 +129,8 @@ body {
 
     .ImgHdCvr {
         @include u1.block_display();
-        width: 100vw;
-        height: 100vh;
+        width: clamp(1220px, 100%, 1500px);
+        height: clamp(650px, 100vh, 100vh);
 
         .imgEch {
             @include u1.block_display();

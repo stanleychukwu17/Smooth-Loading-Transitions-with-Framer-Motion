@@ -100,11 +100,11 @@ export const scrollDown_2: general = {
 
 export const fImgCvr: general = {
     initial: {
-        y: '-95vh',
+        y: `-740px`,
         zIndex: 2,
     },
     animate: {
-        y:'-10vh',
+        y:'0px',
         zIndex: -1,
         transition: {
             delay: 4,
