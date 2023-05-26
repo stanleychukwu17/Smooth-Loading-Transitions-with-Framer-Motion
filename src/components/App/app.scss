@@ -13,8 +13,8 @@ body {
 }
 .AppMain {
     @include u1.block_display();
-    $sidePadding: 3%;
     min-width: 1220px;
+    $sidePadding: 3%;
 
     .hdrCvr {
         @include u1.flex_display();
@@ -49,18 +49,23 @@ body {
                 font-weight: 800;
                 font-size: u1.rem(14.5);
                 line-height: 1.4;
-                transform: translateX(-80%) translateY(20px) !important;
+                position: relative;
+                top: 20px;
+                left: -10%;
+                // transform: translateX(-80%) translateY(20px);
             }
         }
         .DtsBig, .DtsExpCvr {
-            font-size: u1.rem(180);
-            font-weight: 800;
             color: #8a30e2;
 
             .innerCover {
                 display: flex;
                 height: 226px;
                 overflow: hidden;
+            }
+            .DtsText {
+                font-size: 180px;
+                font-weight: 800;
             }
         }
         .DtsExpCvr {
@@ -95,6 +100,7 @@ body {
         text-align: center;
         font-weight: 800;
         font-size: u1.rem(14);
+        transform-origin: 'center';
 
         > div:first-child {
             @include u1.block_display();

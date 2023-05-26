@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { motion, useAnimationControls } from 'framer-motion'
+import { motion, useAnimationControls, useScroll, useTransform } from 'framer-motion'
 import { echTxtVar_1 } from '../App/AppVariants'
 
 type echProps = {
@@ -8,7 +8,10 @@ type echProps = {
 
 const OneByOne = ({txt, num}: {txt: string, num: number}) => {
     const controls = useAnimationControls()
+    const {scrollY} = useScroll()
+    const fSize = useTransform(scrollY, [0 , 700], ['180px', '175px'])
 
+    
     useEffect(() => {
         setTimeout(() => {
             controls.start('animate')
@@ -16,7 +19,7 @@ const OneByOne = ({txt, num}: {txt: string, num: number}) => {
     }, [controls])
 
     return (
-        <motion.div variants={echTxtVar_1} custom={num} initial='initial' animate={controls}>
+        <motion.div variants={echTxtVar_1} custom={num} initial='initial' animate={controls} className='DtsText' style={{fontSize: fSize}}>
             {txt}
         </motion.div>
     )
