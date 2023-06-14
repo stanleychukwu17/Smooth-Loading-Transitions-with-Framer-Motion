@@ -33,10 +33,25 @@ const App = () => {
     })
 
 
+    console.log(gsap)
     // get the latest scroll position
     useMotionValueEvent(scrollY, 'change', (latestScrollPosition) => {
         // console.log(latestScrollPosition)
     })
+
+
+    // the intro animations (framerMotion starts the animation, gsap comes in midway and ends the animation)
+    useEffect(() => {
+        // on page load, we stop the 'body' from overflowing. we also scroll the 'body' to the top so the animation is visible
+        // const body = document.querySelector('body') as Element
+        // body.classList.add('bodyStopOverflow')
+
+        // gsap.to('.gsap2, .gsap3, .gsap4, .gsap5', {y:30, opacity:0, delay:3.2, stagger: .3, duration: .5})
+        // gsap.to('.gsap1', {
+        //     scale:2.27, x:15, delay:4, duration: .8,
+        //     onComplete: () => { body.classList.remove('bodyStopOverflow') } // allow 'body to now overFlow
+        // })
+    }, [])
 
     // background color changes on scroll
     // const bgColor = useTransform(scrollY, [0 , 700], ['#fffefc', '#000000'])
@@ -59,18 +74,6 @@ const App = () => {
 
 
 
-    // the bellow useEffect is used for gsap animations
-    useEffect(() => {
-        // on page load, we stop the 'body' from overflowing. we also scroll the 'body' to the top so the animation is visible
-        const body = document.querySelector('body') as Element
-        body.classList.add('bodyStopOverflow')
-
-        gsap.to('.gsap2, .gsap3, .gsap4, .gsap5', {y:30, opacity:0, delay:3.2, stagger: .3, duration: .5})
-        gsap.to('.gsap1', {
-            scale:2.27, x:15, delay:4, duration: .8,
-            onComplete: () => { body.classList.remove('bodyStopOverflow') } // allow 'body to now overFlow
-        })
-    }, [])
 
 
     return (
@@ -113,6 +116,7 @@ const App = () => {
                 </motion.div>
             </div>
 
+            {/* the round ball asking user to 'Scroll down' at the bottom right of the page.. */}
             <motion.div className="scrollDown" variants={scrollDown_1} initial='initial' animate='animate' style={{x:rollX, rotate:rollRotate}}>
                 <motion.div variants={scrollDown_2} initial='initial' animate='animate'>Scroll</motion.div>
                 <motion.div variants={scrollDown_2} initial='initial' animate='animate'>Down</motion.div>
@@ -128,17 +132,20 @@ const App = () => {
             </motion.div>
             {/*--end--*/}
 
-            <div className="">
-                <img src="" alt="" />
+            <div className="Houses_MCover">
+                <div className="">
+                    {/* the absolute abstract element */}
+                </div>
+                <div className="">
+                    {/* the image cover with some Ai abstract items */}
+                    <div className="">
+                        <div className="">
+                            {/* the main image holder */}
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div className="ImgHdCvr">
-                <div className="imgEch img1"><img src={p1} alt="" /></div>
-                <div className="imgEch img2"><img src={p2} alt="" /></div>
-                <div className="imgEch img3"><img src={p4} alt="" /></div>
-                <div className="imgEch img4"><img src={p3} alt="" /></div>
-                <div className="imgEch img5"><img src={p5} alt="" /></div>
-            </div>
         </div>
     )
 }

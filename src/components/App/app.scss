@@ -138,6 +138,7 @@ body {
 
     .ImgHdCvr {
         @include u1.block_display();
+        display: none;
         width: clamp(1220px, 100%, 1500px);
         height: clamp(650px, 100vh, 100vh);
 
@@ -170,5 +171,11 @@ body {
     .FirstImage {
         margin: 0 0 4750px;
         background-color: $bgColor;
+    }
+
+    .Houses_MCover {
+        @include u1.block_display();
+        height: clamp(700px, 100vh, 1000px);
+        background-color: chocolate;
     }
 }
