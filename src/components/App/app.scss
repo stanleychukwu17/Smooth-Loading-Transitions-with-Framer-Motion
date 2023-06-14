@@ -46,6 +46,7 @@ body {
 
         .DtsMidCvr {
             padding: 0 $sidePadding;
+            width: 100%;
     
             .DtsTopHt {
                 @include u1.flex_display();

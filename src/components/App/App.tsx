@@ -1,5 +1,5 @@
 import { useEffect, } from 'react';
-import { motion, useMotionValue, useScroll, useSpring, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useMotionValueEvent, useScroll, useSpring, useTransform } from 'framer-motion';
 import { gsap } from 'gsap';
 import {usePin} from '../../hooks/usePin'
 
@@ -31,8 +31,12 @@ const App = () => {
         'distanceFromTop':83, // to get the distance of the element from the top, const item = document.querySelector('div.DtsMidCvr'); const offset = item?.getBoundingClientRect(); console.log(offset.y or offset.top)
         'distanceToPin': 2000,
     })
+    // useMotionValueEvent(scrollY, 'change', (latest) => {
+    //     console.log(latest, padLeft.get())
+    // })
 
-    // back ground color changes on scroll
+
+    // background color changes on scroll
     // const bgColor = useTransform(scrollY, [0 , 700], ['#fffefc', '#000000'])
     const padLeft = useTransform(scrollY, [0 , 1100], ['50%', '0%'])
 

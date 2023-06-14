@@ -27,7 +27,7 @@ export const usePin = (props: usePinProps): MotionValue<number> => {
             gsap.set('div.DtsMidCvr', {position: 'relative'})
         }
 
-        console.log({currentScrollY, dGoTo, 'ePass':currentScrollY > dGoTo, currentNumber})
+        // console.log({currentScrollY, dGoTo, 'ePass':currentScrollY > dGoTo, currentNumber})
         newYPos.set(currentNumber)
     })
 
