@@ -39,70 +39,76 @@ body {
         }
     }
 
-    .DtsMidCvr {
-        padding: 0 $sidePadding;
+    .justForHeight {
+        display: block;
+        position: relative;
+        height: 678px;
 
-        .DtsTopHt {
-            @include u1.flex_display();
-
-            .DtsWriteUp {
-                font-weight: 800;
-                font-size: u1.rem(14.5);
-                line-height: 1.4;
-                position: relative;
-                top: 20px;
-                left: -10%;
-            }
-        }
-        .DtsBig, .DtsExpCvr {
-            @include u1.flex_display();
-            $boxHeight: 226px;
-            color: #8a30e2;
-
-            .dtsInner1 {
-                @include u1.block_display();
-                padding: 0 30px;
-
-                .innerA {
-                    display: flex;
-                    overflow: hidden;
-                    height: $boxHeight;
-                    z-index: 1;
+        .DtsMidCvr {
+            padding: 0 $sidePadding;
     
-                    .DtsText {
-                        font-size: 180px;
-                        font-weight: 800;
+            .DtsTopHt {
+                @include u1.flex_display();
+    
+                .DtsWriteUp {
+                    font-weight: 800;
+                    font-size: u1.rem(14.5);
+                    line-height: 1.4;
+                    position: relative;
+                    top: 20px;
+                    left: -10%;
+                }
+            }
+            .DtsBig, .DtsExpCvr {
+                @include u1.flex_display();
+                $boxHeight: 226px;
+                color: #8a30e2;
+    
+                .dtsInner1 {
+                    @include u1.block_display();
+                    padding: 0 30px;
+    
+                    .innerA {
+                        display: flex;
+                        overflow: hidden;
+                        height: $boxHeight;
+                        z-index: 1;
+        
+                        .DtsText {
+                            font-size: 180px;
+                            font-weight: 800;
+                        }
+                    }
+                    .innerB {
+                        @include u1.block_display();
+                        background-color: #000;
+                        height: $boxHeight;
+                        position: absolute;
+                        z-index: -1;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        transition: all 1s ease-out
                     }
                 }
-                .innerB {
+            }
+            .DtsExpCvr {
+                @include u1.flex_display();
+    
+                .DtsExp {
                     @include u1.block_display();
-                    background-color: #000;
-                    height: $boxHeight;
-                    position: absolute;
-                    z-index: -1;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    transition: all 1s ease-out
+                    min-width: 100vw;
+    
+                    > div {
+                        padding: 0 0 0 18%
+                    }
                 }
             }
-        }
-        .DtsExpCvr {
-            @include u1.flex_display();
-
-            .DtsExp {
-                @include u1.block_display();
-                min-width: 100vw;
-
-                > div {
-                    padding: 0 0 0 18%
-                }
+            .DtsStudio {
+                padding: 0 0 0 55%;
+                transition: all 1s ease-out
             }
-        }
-        .DtsStudio {
-            padding: 0 0 0 55%;
-            transition: all 1s ease-out
         }
     }
 

@@ -80,29 +80,33 @@ const App = () => {
                 </div>
                 <div className="hdrWrkUs">Let's work together</div>
             </motion.header>
-            <motion.div className="DtsMidCvr" style={{y:mid_Y}}>
-                <div className="DtsTopHt">
-                    <div className="DtsBig">
-                        <EchText text='branding' allowBackground />
+
+            <div className="justForHeight">
+                <motion.div className="DtsMidCvr" style={{y:mid_Y}}>
+                    <div className="DtsTopHt">
+                        <div className="DtsBig">
+                            <EchText text='branding' allowBackground />
+                        </div>
+                        <motion.div className="DtsWriteUp" variants={headerVariant} custom={1.15} initial='initial' animate='animate' style={{opacity: txtOpacity, y: txtY}}>
+                            <p>We are specialized in setting up the</p>
+                            <p>foundation of your brand and</p>
+                            <p>setting you up for success</p>
+                        </motion.div>
                     </div>
-                    <motion.div className="DtsWriteUp" variants={headerVariant} custom={1.15} initial='initial' animate='animate' style={{opacity: txtOpacity, y: txtY}}>
-                        <p>We are specialized in setting up the</p>
-                        <p>foundation of your brand and</p>
-                        <p>setting you up for success</p>
+                    <div className="DtsExpCvr">
+                        <motion.div variants={exp} animate='animate'>
+                            <ExpComp />
+                        </motion.div>
+                        <motion.div variants={exp_2} animate='animate' >
+                            <ExpComp />
+                        </motion.div>
+                    </div>
+                    <motion.div className="DtsBig DtsStudio" style={{paddingLeft: padLeft}}>
+                        <EchText text='studio' allowBackground />
                     </motion.div>
-                </div>
-                <div className="DtsExpCvr">
-                    <motion.div variants={exp} animate='animate'>
-                        <ExpComp />
-                    </motion.div>
-                    <motion.div variants={exp_2} animate='animate' >
-                        <ExpComp />
-                    </motion.div>
-                </div>
-                <motion.div className="DtsBig DtsStudio" style={{paddingLeft: padLeft}}>
-                    <EchText text='studio' allowBackground />
                 </motion.div>
-            </motion.div>
+            </div>
+
             <motion.div className="scrollDown" variants={scrollDown_1} initial='initial' animate='animate' style={{x:rollX, rotate:rollRotate}}>
                 <motion.div variants={scrollDown_2} initial='initial' animate='animate'>Scroll</motion.div>
                 <motion.div variants={scrollDown_2} initial='initial' animate='animate'>Down</motion.div>
