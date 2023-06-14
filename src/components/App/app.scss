@@ -90,7 +90,7 @@ body {
                         right: 0;
                         bottom: 0;
                         left: 0;
-                        transition: all 1s ease-out
+                        transition: all 0.5s linear
                     }
                 }
             }
@@ -107,8 +107,8 @@ body {
                 }
             }
             .DtsStudio {
-                padding: 0 0 0 55%;
-                transition: all 1s ease-out
+                padding: 0 0 0 50%;
+                transition: all 0.5s linear
             }
         }
     }

@@ -29,12 +29,14 @@ const App = () => {
     usePin({
         'itemToUpdate':mid_Y,
         'distanceFromTop':83, // to get the distance of the element from the top, const item = document.querySelector('div.DtsMidCvr'); const offset = item?.getBoundingClientRect(); console.log(offset.y or offset.top)
-        'distanceToPin': 2000,
+        'distanceToPin': 4000,
     })
-    // useMotionValueEvent(scrollY, 'change', (latest) => {
-    //     console.log(latest, padLeft.get())
-    // })
 
+
+    // get the latest scroll position
+    useMotionValueEvent(scrollY, 'change', (latestScrollPosition) => {
+        // console.log(latestScrollPosition)
+    })
 
     // background color changes on scroll
     // const bgColor = useTransform(scrollY, [0 , 700], ['#fffefc', '#000000'])
