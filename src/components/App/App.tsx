@@ -135,11 +135,11 @@ const App = () => {
 
             {/* the mid section with abstract */}
             <div className="Houses_MCover">
-                <div className="">
+                <div className="Houses_AbsCvr">
                     {/* the absolute abstract element */}
                     for absolute items
                 </div>
-                <div className="">
+                <div className="Houses_ImgAbsolute">
                     {/* the image cover with some Ai abstract items */}
                     <div className="">
                         <div className="">
