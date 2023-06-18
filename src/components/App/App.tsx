@@ -22,6 +22,7 @@ import p2 from '../../assets/images/p2.jpg'
 import p3 from '../../assets/images/p3.jpg'
 import p4 from '../../assets/images/p4.jpg'
 import p5 from '../../assets/images/p5.jpg'
+import EsEchImg from '../HsEchImg/EsEchImg';
 
 const App = () => {
     const {scrollY} = useScroll()
@@ -142,9 +143,8 @@ const App = () => {
                 <div className="Houses_ImgAbsolute">
                     {/* the image cover with some Ai abstract items */}
                     <div className="Houses_EchImgCvr">
-                        <div className="Houses_EchOne">
-                            <img src={p3} alt="" />
-                        </div>
+                        <EsEchImg img={p3} />
+                        <EsEchImg img={p5} />
                     </div>
                 </div>
             </div>
