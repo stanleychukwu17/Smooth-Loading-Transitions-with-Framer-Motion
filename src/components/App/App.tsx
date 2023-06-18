@@ -90,6 +90,7 @@ const App = () => {
                 <div className="hdrWrkUs">Let's work together</div>
             </motion.header>
 
+            {/* holds the section immediately after the header, {Branding, experience, studio} animations */}
             <div className="justForHeight">
                 <motion.div className="DtsMidCvr" style={{y:mid_Y}}>
                     <div className="DtsTopHt">
@@ -116,7 +117,7 @@ const App = () => {
                 </motion.div>
             </div>
 
-            {/* the round ball asking user to 'Scroll down' at the bottom right of the page.. */}
+            {/* the round ball asking user to 'Scroll down' at the bottom left corner of the page.. */}
             <motion.div className="scrollDown" variants={scrollDown_1} initial='initial' animate='animate' style={{x:rollX, rotate:rollRotate}}>
                 <motion.div variants={scrollDown_2} initial='initial' animate='animate'>Scroll</motion.div>
                 <motion.div variants={scrollDown_2} initial='initial' animate='animate'>Down</motion.div>
@@ -132,15 +133,18 @@ const App = () => {
             </motion.div>
             {/*--end--*/}
 
+            {/* the mid section with abstract */}
             <div className="Houses_MCover">
                 <div className="">
                     {/* the absolute abstract element */}
+                    for absolute items
                 </div>
                 <div className="">
                     {/* the image cover with some Ai abstract items */}
                     <div className="">
                         <div className="">
-                            {/* the main image holder */}
+                            {/* each images */}
+                            each images
                         </div>
                     </div>
                 </div>
