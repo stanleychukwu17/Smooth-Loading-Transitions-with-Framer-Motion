@@ -41,7 +41,7 @@ const App = () => {
     usePin({
         itemToUpdate: mid_Y2,
         distanceFromTop: 1362, // to get the distance of the element from the top, const item = document.querySelector('div.Houses_MCover'); const offset = item?.getBoundingClientRect(); console.log(offset.y or offset.top)
-        distanceToPin: 4000,
+        distanceToPin: 8000,
         itemToBeFixed: 'div.Houses_MCover'
     })
 
@@ -157,8 +157,11 @@ const App = () => {
 
                         <div className="Houses_EchImgCvr">
                             <div className="Houses_ImgBox">
-                                <EsEchImg img={p3} scale={1} />
-                                {/* <EsEchImg img={p5} /> */}
+                                <EsEchImg img={p1} details={{scale1: 6500, scale2: 7200, opacity1: 8400, opacity2: 9400}} key="house1" />
+                                <EsEchImg img={p2} details={{scale1: 5200, scale2: 5900, opacity1: 6800, opacity2: 7800}} key="house1" />
+                                <EsEchImg img={p3} details={{scale1: 3900, scale2: 4600, opacity1: 5200, opacity2: 6200}} key="house1" />
+                                <EsEchImg img={p4} details={{scale1: 2600, scale2: 3300, opacity1: 3600, opacity2: 4600}} key="house1" />
+                                <EsEchImg img={p5} details={{scale1: 1300, scale2: 2000, opacity1: 2500, opacity2: 3000}} key="house2" />
                             </div>
                         </div>
                     </div>
