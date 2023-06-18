@@ -198,21 +198,29 @@ body {
                 justify-content: flex-end;
                 align-items: center;
                 position: relative;
-                font-size: 200px;
-                color: greenyellow;
                 height: 100%;
 
-                .Houses_EchOne {
+                .Houses_ImgBox {
                     position: relative;
                     background-color: #721b4e;
                     width: clamp(500px, 45%, 700px);
-                    height: 90%;
+                    height: 100%;
 
-                    img {
-                        position: relative;
+                    .Houses_EchOne {
+                        position: absolute;
                         width: 100%;
                         height: 100%;
-                        object-fit: cover;
+                        transform: scale(.8);
+                        transform-origin: center;
+                        // filter: blur(50px);
+                        
+                        img {
+                            // display: none;
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
                     }
                 }
             }

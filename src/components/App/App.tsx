@@ -142,9 +142,12 @@ const App = () => {
                 </div>
                 <div className="Houses_ImgAbsolute">
                     {/* the image cover with some Ai abstract items */}
+
                     <div className="Houses_EchImgCvr">
-                        <EsEchImg img={p3} />
-                        <EsEchImg img={p5} />
+                        <div className="Houses_ImgBox">
+                            <EsEchImg img={p3} scale={1} />
+                            <EsEchImg img={p5} />
+                        </div>
                     </div>
                 </div>
             </div>
