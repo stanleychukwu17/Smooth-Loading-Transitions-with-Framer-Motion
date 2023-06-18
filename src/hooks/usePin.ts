@@ -4,12 +4,14 @@ import { gsap } from 'gsap';
 type usePinProps = {
     itemToUpdate: MotionValue<number>,
     distanceFromTop: number,
-    distanceToPin: number
+    distanceToPin: number,
+    itemToBeFixed: string,
 } 
 export const usePin = (props: usePinProps): MotionValue<number> => {
     const itemToUpdate = props.itemToUpdate
     const dTop = props.distanceFromTop
     const dGoTo = props.distanceToPin
+    const itemToBeFixed = props.itemToBeFixed
     const {scrollY} = useScroll()
     let newYPos = useMotionValue(0)
     let currentNumber = 0;
@@ -17,14 +19,14 @@ export const usePin = (props: usePinProps): MotionValue<number> => {
     useTransform(scrollY, (currentScrollY) => { // inCharge of pining the phone down on user scroll
         currentNumber = 0
         if (currentScrollY > dTop && currentScrollY <= dGoTo) {
-            gsap.set('div.DtsMidCvr', {position: 'fixed'})
+            gsap.set(itemToBeFixed, {position: 'fixed'})
             currentNumber = 0 - dTop;
         } else if (currentScrollY > dGoTo) {
-            gsap.set('div.DtsMidCvr', {position: 'relative'})
+            gsap.set(itemToBeFixed, {position: 'relative'})
             currentNumber = dGoTo - dTop
         } else {
             currentNumber = 0
-            gsap.set('div.DtsMidCvr', {position: 'relative'})
+            gsap.set(itemToBeFixed, {position: 'relative'})
         }
 
         // console.log({currentScrollY, dGoTo, 'ePass':currentScrollY > dGoTo, currentNumber})

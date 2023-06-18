@@ -26,13 +26,24 @@ import EsEchImg from '../HsEchImg/EsEchImg';
 
 const App = () => {
     const {scrollY} = useScroll()
+
+    // for just height 1
     const mid_Y = useMotionValue(0)
     usePin({
-        'itemToUpdate':mid_Y,
-        'distanceFromTop':83, // to get the distance of the element from the top, const item = document.querySelector('div.DtsMidCvr'); const offset = item?.getBoundingClientRect(); console.log(offset.y or offset.top)
-        'distanceToPin': 4000,
+        itemToUpdate: mid_Y,
+        distanceFromTop: 83, // to get the distance of the element from the top, const item = document.querySelector('div.DtsMidCvr'); const offset = item?.getBoundingClientRect(); console.log(offset.y or offset.top)
+        distanceToPin: 4000,
+        itemToBeFixed: 'div.DtsMidCvr'
     })
 
+    //for just height 2
+    // const mid_Y2 = useMotionValue(0)
+    // usePin({
+    //     itemToUpdate: mid_Y2,
+    //     distanceFromTop: 83, // to get the distance of the element from the top, const item = document.querySelector('div.DtsMidCvr'); const offset = item?.getBoundingClientRect(); console.log(offset.y or offset.top)
+    //     distanceToPin: 4000,
+    //     itemToBeFixed: 'div.Houses_MCover'
+    // })
 
     console.log(gsap)
     // get the latest scroll position
@@ -52,6 +63,9 @@ const App = () => {
         //     scale:2.27, x:15, delay:4, duration: .8,
         //     onComplete: () => { body.classList.remove('bodyStopOverflow') } // allow 'body to now overFlow
         // })
+
+        const item = document.querySelector('div.Houses_MCover')
+        console.log(item)
     }, [])
 
     // background color changes on scroll
@@ -92,7 +106,7 @@ const App = () => {
             </motion.header>
 
             {/* holds the section immediately after the header, {Branding, experience, studio} animations */}
-            <div className="justForHeight">
+            <div className="justForHeight1">
                 <motion.div className="DtsMidCvr" style={{y:mid_Y}}>
                     <div className="DtsTopHt">
                         <div className="DtsBig">
@@ -135,18 +149,20 @@ const App = () => {
             {/*--end--*/}
 
             {/* the mid section with abstract */}
-            <div className="Houses_MCover">
-                <div className="Houses_AbsCvr">
-                    {/* the absolute abstract element */}
-                    for absolute items
-                </div>
-                <div className="Houses_ImgAbsolute">
-                    {/* the image cover with some Ai abstract items */}
+            <div className="justForHeight2">
+                <div className="Houses_MCover">
+                    <div className="Houses_AbsCvr">
+                        {/* the absolute abstract element */}
+                        for absolute items
+                    </div>
+                    <div className="Houses_ImgAbsolute">
+                        {/* the image cover with some Ai abstract items */}
 
-                    <div className="Houses_EchImgCvr">
-                        <div className="Houses_ImgBox">
-                            <EsEchImg img={p3} scale={1} />
-                            <EsEchImg img={p5} />
+                        <div className="Houses_EchImgCvr">
+                            <div className="Houses_ImgBox">
+                                <EsEchImg img={p3} scale={1} />
+                                {/* <EsEchImg img={p5} /> */}
+                            </div>
                         </div>
                     </div>
                 </div>
