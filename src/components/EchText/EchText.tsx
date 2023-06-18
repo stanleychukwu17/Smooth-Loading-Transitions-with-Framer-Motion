@@ -2,10 +2,7 @@ import React, { useEffect } from 'react'
 import { motion, useAnimationControls, useScroll, useTransform } from 'framer-motion'
 import { echTxtVar_1 } from '../App/AppVariants'
 
-type echProps = {
-    text: string,
-    allowBackground: boolean
-}
+
 
 const OneByOne = ({txt, num}: {txt: string, num: number}) => {
     const controls = useAnimationControls()
@@ -26,6 +23,10 @@ const OneByOne = ({txt, num}: {txt: string, num: number}) => {
     )
 }
 
+type echProps = {
+    text: string,
+    allowBackground: boolean
+}
 export default function EchText(props: echProps) {
     const txtToShow = props.text.split('')
     const allowBackground = props.allowBackground

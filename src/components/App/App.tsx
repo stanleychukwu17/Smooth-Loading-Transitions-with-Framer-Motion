@@ -141,10 +141,9 @@ const App = () => {
                 </div>
                 <div className="Houses_ImgAbsolute">
                     {/* the image cover with some Ai abstract items */}
-                    <div className="">
-                        <div className="">
-                            {/* each images */}
-                            each images
+                    <div className="Houses_EchImgCvr">
+                        <div className="Houses_EchOne">
+                            <img src={p3} alt="" />
                         </div>
                     </div>
                 </div>
