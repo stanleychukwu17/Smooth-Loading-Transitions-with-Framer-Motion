@@ -177,13 +177,16 @@ body {
     .justForHeight2 {
         display: block;
         position: relative;
-        height: clamp(700px, 100vh, 1000px);
-        margin: 600px 0 0 0;
+        height: clamp(650px, 100vh, 1000px);
+        margin: 600px 0 5000px;
 
         .Houses_MCover {
             @include u1.block_display();
             width: 100%;
-            height: 100%;
+            height: inherit;
+            // left: 0;
+            // right: 0;
+            // bottom: 0;
     
             .Houses_AbsCvr {
                 @include u1.block_display();

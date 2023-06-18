@@ -36,14 +36,14 @@ const App = () => {
         itemToBeFixed: 'div.DtsMidCvr'
     })
 
-    //for just height 2
-    // const mid_Y2 = useMotionValue(0)
-    // usePin({
-    //     itemToUpdate: mid_Y2,
-    //     distanceFromTop: 83, // to get the distance of the element from the top, const item = document.querySelector('div.DtsMidCvr'); const offset = item?.getBoundingClientRect(); console.log(offset.y or offset.top)
-    //     distanceToPin: 4000,
-    //     itemToBeFixed: 'div.Houses_MCover'
-    // })
+    // for just height 2
+    const mid_Y2 = useMotionValue(0)
+    usePin({
+        itemToUpdate: mid_Y2,
+        distanceFromTop: 1362, // to get the distance of the element from the top, const item = document.querySelector('div.Houses_MCover'); const offset = item?.getBoundingClientRect(); console.log(offset.y or offset.top)
+        distanceToPin: 4000,
+        itemToBeFixed: 'div.Houses_MCover'
+    })
 
     console.log(gsap)
     // get the latest scroll position
@@ -63,9 +63,6 @@ const App = () => {
         //     scale:2.27, x:15, delay:4, duration: .8,
         //     onComplete: () => { body.classList.remove('bodyStopOverflow') } // allow 'body to now overFlow
         // })
-
-        const item = document.querySelector('div.Houses_MCover')
-        console.log(item)
     }, [])
 
     // background color changes on scroll
@@ -150,7 +147,7 @@ const App = () => {
 
             {/* the mid section with abstract */}
             <div className="justForHeight2">
-                <div className="Houses_MCover">
+                <motion.div className="Houses_MCover" style={{y:mid_Y2}}>
                     <div className="Houses_AbsCvr">
                         {/* the absolute abstract element */}
                         for absolute items
@@ -165,7 +162,7 @@ const App = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
         </div>
